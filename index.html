@@ -12,6 +12,14 @@
             body>footer {
                 max-width: 960px;
             }
+
+            article {
+                border: 1px var(--pico-muted-border-color) solid;
+
+                & hgroup {
+                    margin-bottom: 0;
+                }
+            }
         </style>
         <title>HC Torres</title>
     </head>
@@ -23,6 +31,57 @@
                 <p>Nada é eterno!</p>
             </hgroup>
         </header>
+        <main>
+            <hgroup>
+                <h2>Cursos</h2>
+                <p>Lista de cursos ministrados</p>
+            </hgroup>
+            <article>
+                <header>
+                    <hgroup>
+                        <h5>
+                            <a href="https://github.com/hctorres02/curso-php" target="_blank">
+                                Curso PHP: do XLSX ao CMS
+                            </a>
+                        </h5>
+                        <p>Transformando uma planilha em um sistema web</p>
+                    </hgroup>
+                </header>
+                <p>
+                    Com foco em resolver um problema real &ndash; digitalizar e gerenciar informações de uma
+                    planilha &ndash;, a proposta se diferencia por unir fundamentos da linguagem a uma aplicação
+                    concreta, didática e útil.
+                </p>
+                <p>
+                    O curso entrega um conjunto de conhecimentos técnicos fundamentais para desenvolvedores
+                    iniciantes ou intermediários que desejam aprender PHP na prática.
+                </p>
+                <details>
+                    <summary><strong>Roadmap</strong></summary>
+                    <ul>
+                        <li>Modelo entidade relacionamento</li>
+                        <li>Casos de uso, diagrama de classes</li>
+                        <li>Wireframe, mock-up</li>
+                        <li>Versionamento</li>
+                        <li>PHP, Composer, PSR</li>
+                        <li>Suíte de testes</li>
+                        <li>Depuração</li>
+                        <li>SGBD, migrations</li>
+                        <li>MVC, DI, Twig</li>
+                        <li>Listagem, paginação, pesquisa</li>
+                        <li>Components, criação, edição, exclusão</li>
+                        <li>Menu dinâmico, fluxo http</li>
+                        <li>CSRF</li>
+                        <li>Middlewares</li>
+                        <li>Autenticação, menu dinâmico</li>
+                        <li>Autorização</li>
+                        <li>Auditoria, logs</li>
+                        <li>Signed URLs, notificações, cron jobs</li>
+                        <li>Upload, streaming</li>
+                    </ul>
+                </details>
+            </article>
+        </main>
         <footer>
             <p>
                 <small>Feito com <a href="https://picocss.com">Pico CSS</a></small>
