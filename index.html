@@ -8,21 +8,32 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/65797459?s=48&v=4" type="image/png">
         <style>
-            html,
             body {
-                height: 100%;
                 display: flex;
                 flex-direction: column;
-            }
-
-            header,
-            footer {
-                flex-grow: 0;
-                flex-shrink: 0;
+                min-height: 100vh;
             }
 
             main {
-                flex-grow: 1;
+                flex: 1;
+            }
+
+            footer nav ul {
+                justify-content: center;
+                width: 100%;
+            }
+
+            article header h2 {
+                font-size: 1.25rem;
+                margin: 0;
+            }
+
+            .container {
+                max-width: 700px;
+            }
+
+            .text-center {
+                text-align: center;
             }
         </style>
         <title>HC Torres</title>
@@ -30,7 +41,7 @@
 
     <body class="container">
         <header>
-            <hgroup>
+            <hgroup class="text-center">
                 <h1>HC Torres</h1>
                 <p>Nada é eterno!</p>
             </hgroup>
@@ -62,7 +73,7 @@
             </aside>
         </main>
         <footer>
-            <p>
+            <p class="text-center">
                 <small>Feito com <a href="https://picocss.com" target="_blank">Pico CSS</a>.</small>
             </p>
         </footer>
