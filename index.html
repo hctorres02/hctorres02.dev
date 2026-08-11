@@ -1,43 +1,49 @@
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/65797459?s=48&v=4" type="image/png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <link rel="stylesheet" href="/style.css">
-    <title>HC Torres</title>
-</head>
+<!DOCTYPE html>
+<html>
 
-<body>
-    <div id="app" class="container">
-        <header>
-            <hgroup>
-                <h1>{{ profile.name }}</h1>
-                <p>{{ profile.motto }}</p>
-            </hgroup>
-        </header>
-        <main>
-            <p>{{ profile.description }}</p>
-            <nav aria-label="Links">
-                <ul>
-                    <li v-for="link in links" :key="link.href">
-                        <a :href="link.href" target="_blank" rel="noopener noreferrer">
-                            <svg v-if="link.icon" class="link-icon" viewBox="0 0 496 512" fill="currentColor" aria-hidden="true">
-                                <path :d="link.icon"></path>
-                            </svg>
-                            <span>{{ link.label }}</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </main>
-        <footer>
-            <p>
-                <small>
-                    Feito com <a href="https://picocss.com" target="_blank" rel="noopener noreferrer">Pico CSS</a>.
-                </small>
-            </p>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.min.js"></script>
-    <script src="/app.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://avatars.githubusercontent.com/u/65797459?s=48&v=4" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/style.css">
+        <title>HC Torres</title>
+    </head>
+
+    <body>
+        <div id="app" class="container">
+            <header>
+                <hgroup>
+                    <h1>{{ profile.name }}</h1>
+                    <p>{{ profile.motto }}</p>
+                </hgroup>
+            </header>
+            <main>
+                <p>{{ profile.description }}</p>
+                <nav aria-label="Links">
+                    <ul>
+                        <li v-for="link in links" :key="link.href">
+                            <a :href="link.href" target="_blank" rel="noopener noreferrer">
+                                <svg v-if="link.icon" class="link-icon" viewBox="0 0 496 512" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path :d="link.icon"></path>
+                                </svg>
+                                <span>{{ link.label }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+            <footer>
+                <p>
+                    <small>
+                        Feito com <a href="https://picocss.com" target="_blank" rel="noopener noreferrer">Pico CSS</a>.
+                    </small>
+                </p>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.min.js"></script>
+        <script src="/app.js"></script>
+    </body>
+
+</html>
