@@ -43,7 +43,21 @@
             </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.min.js"></script>
-        <script src="/app.js"></script>
+        <script type="module">
+            import profile from './profile.json' with { type: 'json' }
+            import links from './links.json' with { type: 'json' }
+
+            const { createApp } = Vue
+
+            createApp({
+                data() {
+                    return {
+                        profile,
+                        links,
+                    }
+                },
+            }).mount('#app')
+        </script>
     </body>
 
 </html>
