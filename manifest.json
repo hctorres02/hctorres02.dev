@@ -1,0 +1,19 @@
+{
+    "name": "PROFILE_NAME",
+    "short_name": "PROFILE_NAME",
+    "description": "PROFILE_DESCRIPTION",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "PROFILE_AVATAR?s=192&v=4",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "PROFILE_AVATAR?s=512&v=4",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

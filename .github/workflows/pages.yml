@@ -21,6 +21,9 @@ jobs:
       - name: Prepare site
         run: php .github/scripts/prepare.php
 
+      - name: Generate metadata
+        run: php .github/scripts/generate-meta.php
+
       - name: Hash static assets
         run: php .github/scripts/hash-assets.php
 

@@ -14,7 +14,7 @@ foreach ($files as $file) {
 
     $filename = basename($file);
 
-    if (preg_match('/\.[a-f0-9]{8}\.[^.]+$/i', $filename)) {
+    if ($filename == 'manifest.json' || preg_match('/\.[a-f0-9]{8}\.[^.]+$/i', $filename)) {
         continue;
     }
 
