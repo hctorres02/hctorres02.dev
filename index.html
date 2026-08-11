@@ -1,131 +1,43 @@
-<!doctype html>
-<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/65797459?s=48&v=4" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>HC Torres</title>
+</head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/65797459?s=48&v=4" type="image/png">
-        <style>
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
-
-            main {
-                flex: 1;
-            }
-
-            footer nav ul {
-                justify-content: center;
-                width: 100%;
-            }
-
-            article header h2 {
-                font-size: 1.25rem;
-                margin: 0;
-            }
-
-            .container {
-                max-width: 700px;
-            }
-
-            .text-center {
-                text-align: center;
-            }
-        </style>
-        <title>HC Torres</title>
-    </head>
-
-    <body class="container">
+<body>
+    <div id="app" class="container">
         <header>
-            <hgroup class="text-center">
-                <h1>HC Torres</h1>
-                <p>Nada é eterno!</p>
+            <hgroup>
+                <h1>{{ profile.name }}</h1>
+                <p>{{ profile.motto }}</p>
             </hgroup>
         </header>
         <main>
-            <section>
-                <article>
-                    <header>
-                        <h2>Desenvolvimento de cursos</h2>
-                    </header>
-                    <p>
-                        Aprender é importante, mas compartilhar conhecimento também faz parte do crescimento de um
-                        desenvolvedor. Pensando nisso, reuni meus conhecimentos e os transformei em mini cursos.
-                    </p>
-                    <ul>
-                        <li>
-                            <a href="https://github.com/hctorres02/curso-php" target="_blank"
-                                rel="noopener noreferrer">PHP</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/hctorres02/curso-laravel" target="_blank"
-                                rel="noopener noreferrer">Laravel</a>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-            <section>
-                <article>
-                    <header>
-                        <h2>Atuação na comunidade</h2>
-                    </header>
-                    <p>
-                        Compartilho conteúdos técnicos em comunidades do Telegram sobre diversas tecnologias.
-                    </p>
-                    <ul>
-                        <li>
-                            <a href="https://t.me/htmlbr" target="_blank" rel="noopener noreferrer">HTML</a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/cssbr" target="_blank" rel="noopener noreferrer">CSS</a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/javascriptbr" target="_blank" rel="noopener noreferrer">JavaScript</a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/vuejsbrasil" target="_blank" rel="noopener noreferrer">VueJS</a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/phpbrasil" target="_blank" rel="noopener noreferrer">PHP</a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/laravelbr" target="_blank" rel="noopener noreferrer">Laravel</a>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-        </main>
-        <footer>
-            <nav>
+            <p>{{ profile.description }}</p>
+            <nav aria-label="Links">
                 <ul>
-                    <li>
-                        <a href="https://github.com/hctorres02" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                            <span>GitHub</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://t.me/hctorres02" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-telegram" aria-hidden="true"></i>
-                            <span>Telegram</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://stackoverflow.com/users/8875754" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-stack-overflow" aria-hidden="true"></i>
-                            <span>Stack Overflow</span>
+                    <li v-for="link in links" :key="link.href">
+                        <a :href="link.href" target="_blank" rel="noopener noreferrer">
+                            <svg v-if="link.icon" class="link-icon" viewBox="0 0 496 512" fill="currentColor" aria-hidden="true">
+                                <path :d="link.icon"></path>
+                            </svg>
+                            <span>{{ link.label }}</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-            <p class="text-center">
-                <small>Feito com <a href="https://picocss.com" target="_blank">Pico CSS</a>.</small>
+        </main>
+        <footer>
+            <p>
+                <small>
+                    Feito com <a href="https://picocss.com" target="_blank" rel="noopener noreferrer">Pico CSS</a>.
+                </small>
             </p>
         </footer>
-    </body>
-
-</html>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.min.js"></script>
+    <script src="/app.js"></script>
+</body>
